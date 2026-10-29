@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'detailchat.dart';
 
 void main() {
   runApp(const MyApp());
@@ -309,7 +310,17 @@ class _HomePageState extends State<HomePage> {
         borderRadius: BorderRadius.circular(15),
         child: InkWell(
           borderRadius: BorderRadius.circular(15),
-          onTap: () {},
+          onTap: () {
+            // KIRIMKAN DATA NAMA DI SINI DAN GUNAKAN DetailChat (Huruf C Besar)
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => DetailChat(
+                  nama: nama, // Mengirimkan nama dari item chat yang diklik
+                ),
+              ),
+            );
+          },
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
