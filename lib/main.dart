@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         scaffoldBackgroundColor: const Color(0xFFF5F7F8),
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color.fromARGB(255, 0, 64, 255),
+          backgroundColor: Color(0xFF075E54),
           foregroundColor: Colors.white,
         ),
       ),
@@ -43,74 +43,135 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final List<Map<String, dynamic>> chats = [
     {
-      'name': 'Riem',
-      'message': 'main lah yoo..',
-      'time': '16:30',
+      'name': 'Dini',
+      'message': 'lau dimana bre',
+      'time': '12:33',
       'unread': 3,
-      'color': const Color.fromARGB(255, 33, 243, 215),
+      'color': const Color.fromARGB(255, 223, 170, 9),
     },
     {
-      'name': 'Irfhan',
-      'message': 'Lagi dimana bre?',
-      'time': '15:10',
+      'name': 'Ghiyas',
+      'message': 'Gas, Maen hayu',
+      'time': '16:10',
       'unread': 2,
+      'color': Colors.orange,
+    },
+    {
+      'name': 'Ubes',
+      'message': 'Nanti jadi pergi?',
+      'time': '15:45',
+      'unread': 0,
+      'color': Colors.purple,
+    },
+    {
+      'name': 'Toto',
+      'message': 'Oke siap',
+      'time': '15:20',
+      'unread': 1,
       'color': Colors.red,
     },
     {
-      'name': 'Jack',
-      'message': 'Tadi lu dimana? gw udah ke rumah lu padahal',
-      'time': '15:20',
-      'unread': 1,
-      'color': Colors.green,
+      'name': 'Iqbal',
+      'message': 'Jangan lupa tugasnya ya',
+      'time': '14:50',
+      'unread': 0,
+      'color': Colors.pink,
+    },
+    {
+      'name': 'Dika',
+      'message': 'Sudah sampai?',
+      'time': '14:20',
+      'unread': 4,
+      'color': Colors.teal,
     },
     {
       'name': 'Eka',
-      'message': 'Gw juara 1 gitar solo, thanks buat dukungan nya bre',
+      'message': 'Besok masuk jam berapa?',
       'time': '13:40',
       'unread': 0,
       'color': Colors.indigo,
     },
     {
       'name': 'Fajar',
-      'message': 'Besok gw ganti ya..',
+      'message': 'Makasih ya',
       'time': '13:15',
       'unread': 2,
       'color': Colors.deepOrange,
     },
     {
-      'name': 'Abid',
-      'message': 'Latihan bola barengin ya..',
+      'name': 'Galang',
+      'message': 'Gas latihan nanti',
       'time': '12:50',
       'unread': 0,
       'color': Colors.green,
     },
     {
+      'name': 'Hendra',
+      'message': 'Oke bro',
+      'time': '12:20',
+      'unread': 1,
+      'color': Colors.cyan,
+    },
+    {
       'name': 'Ilham',
-      'message': 'Besok izinin gw masuk sekolah ya..',
-      'time': '21:50',
+      'message': 'Ada tugas baru?',
+      'time': '11:50',
       'unread': 0,
       'color': Colors.amber,
     },
     {
+      'name': 'Joko',
+      'message': 'Nanti kabari aku',
+      'time': '11:20',
+      'unread': 2,
+      'color': Colors.brown,
+    },
+    {
+      'name': 'Kevin',
+      'message': 'Siap hadir',
+      'time': '10:45',
+      'unread': 0,
+      'color': Colors.deepPurple,
+    },
+    {
       'name': 'Lutfi',
-      'message': 'Gw tunggu di lapangan..',
+      'message': 'Sampai jumpa',
       'time': '10:10',
       'unread': 1,
       'color': Colors.lightBlue,
     },
     {
-      'name': 'Eky',
-      'message': 'Oke, nanti gw anterin',
+      'name': 'Rizky',
+      'message': 'Oke, terima kasih',
       'time': '09:45',
       'unread': 0,
       'color': Colors.lightGreen,
     },
+
+    // CHAT KE-16
+    {
+      'name': 'Rian',
+      'message': 'Sampai ketemu besok!',
+      'time': '09:20',
+      'unread': 5,
+      'color': Colors.blueGrey,
+    },
+
+    // CHAT KE-17
     {
       'name': 'Salsa',
-      'message': 'Jangan lupa datang ya ke ultah gw',
+      'message': 'Jangan lupa datang ya',
       'time': '08:50',
       'unread': 0,
       'color': Colors.pinkAccent,
+    },
+
+    {
+      'name': 'Yoga',
+      'message': 'Mantap sekali',
+      'time': '08:20',
+      'unread': 2,
+      'color': Colors.greenAccent,
     },
   ];
 
@@ -121,30 +182,28 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         backgroundColor: const Color(0xFFF5F7F8),
 
+        // =================================================
         // APP BAR
+        // =================================================
         appBar: AppBar(
           elevation: 0,
           title: const Text(
             'WhatsApp',
-            style: TextStyle(
-              fontSize: 23,
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
           ),
+
           actions: [
             IconButton(
               onPressed: () {},
               icon: const Icon(Icons.camera_alt_outlined),
             ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.search),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.more_vert),
-            ),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
           ],
+
+          // =================================================
+          // TAB BAR
+          // =================================================
           bottom: const TabBar(
             indicatorColor: Colors.white,
             indicatorWeight: 3,
@@ -158,18 +217,18 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
 
+        // =================================================
         // TAB VIEW
+        // =================================================
         body: TabBarView(
-          children: [
-            halamanChat(),
-            halamanStatus(),
-            halamanCall(),
-          ],
+          children: [halamanChat(), halamanStatus(), halamanCall()],
         ),
 
+        // =================================================
         // FLOATING BUTTON
+        // =================================================
         floatingActionButton: FloatingActionButton(
-          backgroundColor: const Color.fromARGB(255, 61, 93, 255),
+          backgroundColor: const Color(0xFF25D366),
           foregroundColor: Colors.white,
           onPressed: () {},
           child: const Icon(Icons.chat),
@@ -179,109 +238,63 @@ class _HomePageState extends State<HomePage> {
   }
 
   // ======================================================
-  // HALAMAN CHAT (Menggunakan Column & ListView)
+  // HALAMAN CHAT
   // ======================================================
 
   Widget halamanChat() {
     return Column(
       children: [
-        // Search Box disatukan menggunakan Padding
-        Padding(
-          padding: const EdgeInsets.fromLTRB(15, 15, 15, 10),
-          child: Container(
-            height: 48,
-            padding: const EdgeInsets.symmetric(horizontal: 15),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(25),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.08),
-                  blurRadius: 6,
-                  offset: const Offset(0, 3),
-                ),
-              ],
-            ),
-            child: const Row(
-              children: [
-                Icon(Icons.search, color: Colors.grey),
-                SizedBox(width: 10),
-                Text(
-                  'Cari chat...',
-                  style: TextStyle(color: Colors.grey, fontSize: 14),
-                ),
-              ],
-            ),
-          ),
-        ),
-
-        // Filter Horizontal menggunakan ListView
-        SizedBox(
-          height: 40,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 15),
-            children: [
-              filterButton('Semua', true),
-              filterButton('Belum dibaca', false),
-              filterButton('Grup', false),
-            ],
-          ),
-        ),
-
-        const SizedBox(height: 5),
-
-        // List Chat menggunakan ListView.builder
+        const SizedBox(height: 40),
         Expanded(
-          child: ListView.builder(
-            padding: const EdgeInsets.only(bottom: 80, top: 5),
-            itemCount: chats.length,
-            itemBuilder: (context, index) {
-              final chat = chats[index];
-              return itemChat(
-                nama: chat['name'],
-                pesan: chat['message'],
-                waktu: chat['time'],
-                jumlah: chat['unread'],
-                warna: chat['color'],
-              );
-            },
+          child: SingleChildScrollView(
+            padding: const EdgeInsetsGeometry.only(bottom: 80, top: 5),
+            child: Column(
+              children: [
+                itemChat(
+                  nama: chats[0]['name'],
+                  pesan: chats[0]['message'],
+                  waktu: chats[0]['time'],
+                  jumlah: chats[0]['unread'],
+                  warna: chats[0]['color'],
+                ),
+              ],
+            ),
           ),
         ),
       ],
     );
   }
 
+  // ======================================================
   // FILTER BUTTON
+  // ======================================================
+
   Widget filterButton(String text, bool aktif) {
-    return Padding(
-      padding: const EdgeInsets.only(right: 8),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
-        decoration: BoxDecoration(
-          color:
-              aktif ? const Color.fromARGB(255, 149, 173, 254) : Colors.white,
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(
-            color: aktif
-                ? const Color.fromARGB(255, 37, 75, 211)
-                : Colors.grey.shade300,
-          ),
+    return Container(
+      margin: const EdgeInsetsGeometry.only(right: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+      decoration: BoxDecoration(
+        color: aktif ? const Color(0xFFD9FDD3) : Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: aktif ? const Color(0xFF25D366) : Colors.grey.shade300,
         ),
-        child: Text(
-          text,
-          style: TextStyle(
-            color:
-                aktif ? const Color.fromARGB(255, 23, 50, 183) : Colors.black87,
-            fontWeight: FontWeight.w600,
-            fontSize: 13,
-          ),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: aktif ? const Color(0xFF128C7E) : Colors.black87,
+          fontWeight: FontWeight.w600,
+          fontSize: 13,
         ),
       ),
     );
   }
 
-  // ITEM CHAT (Menggunakan Padding & Column)
+  // ======================================================
+  // ITEM CHAT
+  // ======================================================
+
   Widget itemChat({
     required String nama,
     required String pesan,
@@ -291,86 +304,104 @@ class _HomePageState extends State<HomePage> {
   }) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
+      child: Material(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(15),
+        child: InkWell(
           borderRadius: BorderRadius.circular(15),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.05),
-              blurRadius: 5,
-              offset: const Offset(0, 2),
+          onTap: () {},
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.05),
+                  blurRadius: 5,
+                  offset: const Offset(0, 2),
+                ),
+              ],
             ),
-          ],
-        ),
-        child: ListTile(
-          contentPadding:
-              const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
-          leading: CircleAvatar(
-            radius: 27,
-            backgroundColor: warna,
-            child: Text(
-              nama.substring(0, 1),
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          title: Text(
-            nama,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-              color: Colors.black87,
-            ),
-          ),
-          subtitle: Padding(
-            padding: const EdgeInsets.only(top: 5),
-            child: Text(
-              pesan,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
-                color: Colors.grey,
-                fontSize: 13,
-              ),
-            ),
-          ),
-          trailing: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Text(
-                waktu,
-                style: TextStyle(
-                  color: jumlah > 0 ? const Color(0xFF128C7E) : Colors.grey,
-                  fontSize: 11,
-                  fontWeight: jumlah > 0 ? FontWeight.bold : FontWeight.normal,
+            child: ListTile(
+              contentPadding:
+                  const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+
+              // =================================================
+              // AVATAR
+              // =================================================
+              leading: CircleAvatar(
+                radius: 27,
+                backgroundColor: warna,
+                child: Text(
+                  nama.substring(0, 1),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-              const SizedBox(height: 6),
-              if (jumlah > 0)
-                Container(
-                  width: 22,
-                  height: 22,
-                  decoration: const BoxDecoration(
-                    color: Color(0xFF25D366),
-                    shape: BoxShape.circle,
-                  ),
-                  child: Center(
-                    child: Text(
-                      jumlah.toString(),
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 11,
-                        fontWeight: FontWeight.bold,
-                      ),
+
+              // =================================================
+              // NAMA + PESAN
+              // =================================================
+              title: Text(
+                nama,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: Colors.black87,
+                ),
+              ),
+
+              subtitle: Padding(
+                padding: const EdgeInsetsGeometry.only(top: 5),
+                child: Text(
+                  pesan,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(color: Colors.grey, fontSize: 13),
+                ),
+              ),
+
+              // =================================================
+              // WAKTU + BADGE
+              // =================================================
+              trailing: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    waktu,
+                    style: TextStyle(
+                      color: jumlah > 0 ? const Color(0xFF128C7E) : Colors.grey,
+                      fontSize: 11,
+                      fontWeight:
+                          jumlah > 0 ? FontWeight.bold : FontWeight.normal,
                     ),
                   ),
-                ),
-            ],
+                  const SizedBox(height: 6),
+                  if (jumlah > 0)
+                    Container(
+                      width: 22,
+                      height: 22,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF25D366),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Center(
+                        child: Text(
+                          jumlah.toString(),
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+            ),
           ),
         ),
       ),
@@ -378,21 +409,18 @@ class _HomePageState extends State<HomePage> {
   }
 
   // ======================================================
-  // HALAMAN STATUS (Menggunakan ListView & Padding)
+  // HALAMAN STATUS
   // ======================================================
 
   Widget halamanStatus() {
     return ListView(
-      padding: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsetsGeometry.only(top: 10),
       children: [
         const Padding(
           padding: EdgeInsets.all(18),
           child: Text(
             'Status',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
         ),
 
@@ -404,11 +432,7 @@ class _HomePageState extends State<HomePage> {
               const CircleAvatar(
                 radius: 28,
                 backgroundColor: Color(0xFF128C7E),
-                child: Icon(
-                  Icons.person,
-                  color: Colors.white,
-                  size: 30,
-                ),
+                child: Icon(Icons.person, color: Colors.white, size: 30),
               ),
               Positioned(
                 right: 0,
@@ -420,11 +444,7 @@ class _HomePageState extends State<HomePage> {
                     color: Color(0xFF25D366),
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(
-                    Icons.add,
-                    color: Colors.white,
-                    size: 16,
-                  ),
+                  child: const Icon(Icons.add, color: Colors.white, size: 16),
                 ),
               ),
             ],
@@ -440,161 +460,111 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.fromLTRB(18, 20, 18, 10),
           child: Text(
             'Recent updates',
-            style: TextStyle(
-              color: Colors.grey,
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
           ),
         ),
 
-        statusItem('jack', 'Hari ini, 05:00', Colors.purple),
+        statusItem('Duns', 'Today, 16:30', Colors.blue),
 
-        statusItem('Riem', 'Hari ini, 12:20', Colors.red),
-
-        statusItem(
-            'Eka', 'Hari ini, 21:04', const Color.fromARGB(255, 54, 60, 244)),
-
-        statusItem(
-            'Irfhan', 'Kemarin, 08:34', const Color.fromARGB(255, 11, 161, 51)),
-
-        statusItem(
-            'Eky', 'Kemarin, 08:02', const Color.fromARGB(255, 145, 29, 116)),
-
-        statusItem(
-            'Salsa', 'Kemarin, 07:40', const Color.fromARGB(255, 212, 91, 82)),
-
-        statusItem(
-            'Fajar', 'Kemarin, 06:32', const Color.fromARGB(255, 244, 181, 54)),
+        statusItem('Fadlan', 'Today, 15:20', Colors.orange),
       ],
     );
   }
 
+  // ======================================================
   // STATUS ITEM
+  // ======================================================
+
   Widget statusItem(String nama, String waktu, Color warna) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 2),
-      child: ListTile(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 4),
-        leading: Container(
-          padding: const EdgeInsets.all(3),
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            border: Border.all(
-              color: const Color(0xFF25D366),
-              width: 3,
+    return ListTile(
+      contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 4),
+      leading: Container(
+        padding: const EdgeInsets.all(3),
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: Border.all(color: const Color(0xFF25D366), width: 3),
+        ),
+        child: CircleAvatar(
+          radius: 25,
+          backgroundColor: warna,
+          child: Text(
+            nama.substring(0, 1),
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
             ),
           ),
-          child: CircleAvatar(
-            radius: 25,
-            backgroundColor: warna,
-            child: Text(
-              nama.substring(0, 1),
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-        ),
-        title: Text(
-          nama,
-          style: const TextStyle(fontWeight: FontWeight.bold),
-        ),
-        subtitle: Text(
-          waktu,
-          style: const TextStyle(color: Colors.grey),
         ),
       ),
+      title: Text(nama, style: const TextStyle(fontWeight: FontWeight.bold)),
+      subtitle: Text(waktu, style: const TextStyle(color: Colors.grey)),
     );
   }
 
   // ======================================================
-  // HALAMAN CALL (Menggunakan ListView & Padding)
+  // HALAMAN CALL
   // ======================================================
 
   Widget halamanCall() {
     return ListView(
-      padding: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsetsGeometry.only(top: 10),
       children: [
         const Padding(
           padding: EdgeInsets.all(18),
           child: Text(
             'Calls',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
         ),
-        callItem('Riem', 'Hari ini, 17:02', Colors.blue, Icons.call_received),
-        callItem('Fadlan', 'Hari ini, 20:15', Colors.orange, Icons.call_made),
-        callItem('Fajar', 'Kemarin, 18:30',
-            const Color.fromARGB(255, 39, 176, 71), Icons.call_received),
-        callItem('Abid', 'Kemarin, 17:49',
-            const Color.fromARGB(255, 39, 137, 176), Icons.call_received),
-        callItem('Irfhan', '30 Sep, 08:30',
-            const Color.fromARGB(255, 149, 255, 146), Icons.call_received),
-        callItem('Eka', '25 Sep, 13:34', const Color.fromARGB(255, 197, 77, 22),
-            Icons.call_received),
+        callItem('Duns', 'Hari ini, 16:00', Colors.blue, Icons.call_received),
+        callItem('Fadlan', 'Kemarin, 20:15', Colors.orange, Icons.call_made),
+        callItem('Andi', 'Kemarin, 18:30', Colors.purple, Icons.call_received),
       ],
     );
   }
 
-  // CALL ITEM (Menggunakan Padding & Column)
+  // ======================================================
+  // CALL ITEM
+  // ======================================================
+
   Widget callItem(String nama, String waktu, Color warna, IconData icon) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(15),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.05),
-              blurRadius: 5,
-              offset: const Offset(0, 2),
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(15),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 5,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: ListTile(
+        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+        leading: CircleAvatar(
+          radius: 27,
+          backgroundColor: warna,
+          child: Text(
+            nama.substring(0, 1),
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
             ),
+          ),
+        ),
+        title: Text(nama, style: const TextStyle(fontWeight: FontWeight.bold)),
+        subtitle: Row(
+          children: [
+            Icon(icon, color: const Color(0xFF25D366), size: 17),
+            const SizedBox(width: 5),
+            Text(waktu, style: const TextStyle(color: Colors.grey)),
           ],
         ),
-        child: ListTile(
-          contentPadding:
-              const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
-          leading: CircleAvatar(
-            radius: 27,
-            backgroundColor: warna,
-            child: Text(
-              nama.substring(0, 1),
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          title: Text(
-            nama,
-            style: const TextStyle(fontWeight: FontWeight.bold),
-          ),
-          subtitle: Row(
-            children: [
-              Icon(
-                icon,
-                color: const Color(0xFF25D366),
-                size: 17,
-              ),
-              const SizedBox(width: 5),
-              Text(
-                waktu,
-                style: const TextStyle(color: Colors.grey),
-              ),
-            ],
-          ),
-          trailing: const Icon(
-            Icons.call,
-            color: Color(0xFF128C7E),
-          ),
-        ),
+        trailing: const Icon(Icons.call, color: Color(0xFF128C7E)),
       ),
     );
   }
