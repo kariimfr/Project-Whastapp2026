@@ -67,13 +67,31 @@ class _DetailChatState extends State<DetailChat> {
           ],
         ),
         // Tambahan ikon di sebelah kanan AppBar sesuai gambar
-        actions: const [
-          Icon(Icons.videocam, color: Colors.grey),
-          SizedBox(width: 16),
-          Icon(Icons.call, color: Colors.grey),
-          SizedBox(width: 16),
-          Icon(Icons.more_vert, color: Colors.grey),
-          SizedBox(width: 8),
+        actions: [
+          IconButton(
+            onPressed: () {
+              // Aksi ketika ikon video ditekan (misal: buka fitur video call)
+              print("Video call ditekan!");
+            },
+            icon: const Icon(Icons.videocam, color: Colors.grey),
+          ),
+
+          IconButton(
+            onPressed: () {
+              // Aksi ketika ikon telepon ditekan
+              print("Telepon ditekan!");
+            },
+            icon: const Icon(Icons.call, color: Colors.grey),
+          ),
+
+          IconButton(
+            onPressed: () {
+              // Aksi ketika ikon titik tiga ditekan (misal: buka menu pop-up)
+              print("Menu lainnya ditekan!");
+            },
+            icon: const Icon(Icons.more_vert, color: Colors.grey),
+          ),
+          const SizedBox(width: 4), // Sedikit jarak di ujung kanan
         ],
       ),
 
