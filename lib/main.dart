@@ -44,7 +44,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final List<Map<String, dynamic>> chats = [
     {
-      'name': 'Dini',
+      'name': 'fasya',
       'message': 'lau dimana bre',
       'time': '12:33',
       'unread': 3,
